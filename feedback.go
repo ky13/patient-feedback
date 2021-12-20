@@ -88,10 +88,10 @@ type Patient struct {
 		Use    string
 	}
 	Gender    string
-	BirthDate string `json: birthDate`
+	BirthDate string
 	Address   []struct {
-		Use  string   `json: use`
-		Line []string `json: line`
+		Use  string
+		Line []string
 	}
 }
 
