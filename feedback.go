@@ -19,12 +19,12 @@ func VerifyRating(rating string) bool {
 }
 
 func IsYes(input string) bool {
-	yesRegex, _ := regexp.Compile("(y|yes)")
+	yesRegex, _ := regexp.Compile("^(y|yes)$")
 	return yesRegex.MatchString(strings.ToLower((input)))
 }
 
 func IsNo(input string) bool {
-	noRegex, _ := regexp.Compile("(n|no)")
+	noRegex, _ := regexp.Compile("^(n|no)$")
 	return noRegex.MatchString(strings.ToLower((input)))
 }
 
@@ -80,6 +80,7 @@ func AskUnderstanding(reader *bufio.Reader, bundle Bundle) bool {
 	for understanding == "" {
 		Prompt()
 		understanding, _ = reader.ReadString('\n')
+		understanding = strings.TrimSuffix(understanding, "\n")
 		//understanding := Ask(reader)
 		pp.Println(understanding)
 
