@@ -29,28 +29,16 @@ Take some creative license with how patients are shown what the program recorded
 
 ## Requirements
 
-    1. Please make a basic architecture diagram
-
-    2. If you know any of the languages/technologies in our tech stack, please use them, i.e.
-
-        a. If you know Go, code the back end in Go
-
-        b. If you know React, build a React UI (otherwise a command line UI is fine)
-
-        c. If you are familiar with cloud services (i.e. AWS), host the program in the cloud (otherwise running this locally is fine); AWS account access will be sent to you separately
-
-        d. BUT you do NOT have to use Postgres or neo4j to store patient responses, you can if you want, but dumping patient responses to a JSON file or any database is fine
-
-    3. Please have at least one unit test or integration test that passes - we like TDD :)
-
-    4. Please prepare for code review, push your code up to GitHub or come prepared to show your code via an IDE, the code must be shared with us for future reference by the end of the interview
-
-    5. Please prepare to explain why you wrote your code the way you did - your thought process is as important as your code
-
-    6. Please prepare to explain how you worked through any technical problems you encountered
-
-    7. If you had to learn a new technology, please prepare to explain how you approached learning that new technology
-
-    8. Please prepare some thoughts on what you might have done differently, or what you would do next, if you were to keep working on this
-
-    9. Feel free to ask as many questions as you like, reach out if you ever get stuck, just reply all to this email
+1. Please make a basic architecture diagram
+2. If you know any of the languages/technologies in our tech stack, please use them, i.e.
+    a. If you know Go, code the back end in Go
+    b. If you know React, build a React UI (otherwise a command line UI is fine)
+    c. If you are familiar with cloud services (i.e. AWS), host the program in the cloud (otherwise running this locally is fine); AWS account access will be sent to you separately
+    d. BUT you do NOT have to use Postgres or neo4j to store patient responses, you can if you want, but dumping patient responses to a JSON file or any database is fine
+3. Please have at least one unit test or integration test that passes - we like TDD :)
+4. Please prepare for code review, push your code up to GitHub or come prepared to show your code via an IDE, the code must be shared with us for future reference by the end of the interview
+5. Please prepare to explain why you wrote your code the way you did - your thought process is as important as your code
+6. Please prepare to explain how you worked through any technical problems you encountered
+7. If you had to learn a new technology, please prepare to explain how you approached learning that new technology
+8. Please prepare some thoughts on what you might have done differently, or what you would do next, if you were to keep working on this
+9. Feel free to ask as many questions as you like, reach out if you ever get stuck, just reply all to this email
