@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/k0kubun/pp"
+	//"github.com/k0kubun/pp"
 	"os"
 	"regexp"
 	"strconv"
@@ -55,16 +55,16 @@ func AskRating(reader *bufio.Reader, bundle Bundle) string {
 
 	fmt.Printf("\nHi %s, on a scale of 1-10, would you recommend Dr %s to a friend or family member? 1 = Would not recommend, 10 = Would strongly recommend\n", patient.Name[0].Given[0], doctor.Name[0].Family)
 
-	rating := ""
-	for rating == "" {
-		ratingInput := Ask(reader)
-		if VerifyRating(ratingInput) {
-			rating = ratingInput
+	var rating string
+	done := false
+	for done == false {
+		rating = Ask(reader)
+		if VerifyRating(rating) {
+			done = true
 		} else {
 			fmt.Println("Please, only respond with a number between 1 and 10.")
 		}
 	}
-
 	return rating
 }
 
@@ -76,20 +76,17 @@ func AskUnderstanding(reader *bufio.Reader, bundle Bundle) bool {
 	fmt.Printf("\nThank you. You were diagnosed with %s. Did Dr %s explain how to manage this diagnosis in a way you could understand? (yes/no)\n", diagnosis.Code.Coding[0].Name, doctor.Name[0].Family)
 
 	var understandingBool bool
-	understanding := ""
-	for understanding == "" {
-		Prompt()
-		understanding, _ = reader.ReadString('\n')
-		understanding = strings.TrimSuffix(understanding, "\n")
-		//understanding := Ask(reader)
-		pp.Println(understanding)
+	done := false
+	for done == false {
+		understanding := Ask(reader)
 
 		if IsYes(understanding) {
+			done = true
 			understandingBool = true
 		} else if IsNo(understanding) {
+			done = true
 			understandingBool = false
 		} else {
-			understanding = ""
 			fmt.Println("Please, only respond with yes or no.")
 		}
 	}
