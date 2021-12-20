@@ -115,7 +115,7 @@ func Summary(bundle Bundle, feedback map[string]string) {
 
 	doctor := GetDoctor(bundle)
 
-	fmt.Println("\n\nThanks again! Here’s what we heard:\n")
+	fmt.Print("\n\nThanks again! Here’s what we heard:\n\n")
 	fmt.Printf("    You said you were %s out of 10 likely to recommend Dr %s\n", feedback["rating"], doctor.Name[0].Family)
 	fmt.Printf("    You felt that you %s understand Dr %s's explanation for how to manage this diagnosis.\n", GetUnderstandingWording(feedback["understanding"]), doctor.Name[0].Family)
 	fmt.Printf("    Your feeling about this diagnosis: %s\n", feedback["feeling"])
