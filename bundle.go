@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/google/uuid"
-	"github.com/k0kubun/pp"
+	//"github.com/k0kubun/pp"
 	"io/ioutil"
 )
 
@@ -163,7 +163,7 @@ func AddFeedback(bundle Bundle, f map[string]string) {
 	// TODO: Figure out how to append onto the Entry slice
 	//bundle.Entry = append(bundle.Entry, feedback)
 	//bundle.Entry[99] = feedback
-	pp.Println(bundle)
+	//pp.Println(bundle)
 }
 
 func SaveFeedback(f map[string]string) {
@@ -174,7 +174,6 @@ func SaveFeedback(f map[string]string) {
 	for key, value := range f {
 		feedback.Response[key] = value
 	}
-	pp.Println(feedback)
 	jsonString, _ := json.Marshal(feedback)
 	path := fmt.Sprintf("feedback-%s.json", feedback.Id)
 	ioutil.WriteFile(path, jsonString, 0600)
